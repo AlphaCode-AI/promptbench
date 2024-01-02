@@ -10,7 +10,7 @@ SUPPORTED_DATASETS = [
     "mmlu", "squad_v2", "un_multi", "iwslt2017", "math",
     "bool_logic", "valid_parentheses",
     "gsm8k", "csqa", "bigbench_date", "bigbench_object_tracking",
-    'last_letter_concat', 'numersense', 'qasc'
+    'last_letter_concat', 'numersense', 'qasc', 'korquad_v2'
 ]
 
 class DatasetLoader:
@@ -46,6 +46,8 @@ class DatasetLoader:
             return MMLU()
         elif dataset_name == "squad_v2":
             return SQUAD_V2()
+        elif dataset_name == "korquad_v2":
+            return KORQUAD_V2()
         elif dataset_name == 'un_multi':
             return UnMulti()
         elif dataset_name == 'iwslt2017':
