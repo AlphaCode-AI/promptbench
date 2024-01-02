@@ -283,6 +283,13 @@ class SQUAD_V2(Dataset):
         for d in data:
             self.data.append(d)
 
+class KORQUAD_V2(Dataset):
+    def __init__(self):
+        self.data = []
+        data = load_dataset("korquad_v2")["validation"]
+        for d in data:
+            self.data.append(d)
+
 
 class MMLU(Dataset):
     """
